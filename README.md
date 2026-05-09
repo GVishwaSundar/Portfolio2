@@ -19,6 +19,7 @@ A premium, single-page React portfolio designed with a distinct "Proof of Work" 
 - **Project Spotlight Effect:** Hovering over a project card subtly blurs and dims the surrounding cards while applying a faint acid-green inner glow to the focused card.
 - **Scroll-Tracked Chain Line:** A fixed vertical chain line on the left of the screen tracks the user's scroll progress, lighting up nodes as new sections are reached.
 - **Subtle Noise Texture:** A fixed, `3%` opacity SVG fractal noise filter overlays the entire application to give the dark background a premium, tactile matte finish.
+- **Custom Brand Icons:** Implemented custom inline SVG versions of GitHub and LinkedIn icons matching Lucide styling. This ensures compatibility with the latest versions of `lucide-react` which removed third-party brand icons to comply with trademark guidelines.
 
 ## 📂 Project Structure
 
