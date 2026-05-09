@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --color-space: #0c0c0a;
+  --color-surface: #131310;
+  --color-surface-2: #1a1a16;
+  --color-border: rgba(255, 248, 220, 0.06);
+  --color-border-hover: rgba(255, 248, 220, 0.13);
+  --color-text: #e8e4d0;
+  --color-text-muted: #a3a08d;
+  --color-text-faint: #6e6b56;
+  --color-accent: #a8ff3e;
+  --color-accent-dim: rgba(168, 255, 62, 0.08);
+  --color-amber: #f5a623;
+  --color-dot: rgba(255, 248, 220, 0.04);
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-space);
+    color: var(--color-text);
+  }
+
+  body {
+    font-family: var(--font-mono);
+    background-color: var(--color-space);
+    background-image: radial-gradient(circle, var(--color-dot) 1px, transparent 1px);
+    background-size: 28px 28px;
+    cursor: none; /* custom cursor */
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  a, button, [role="button"], input, textarea, select {
+    cursor: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-space);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 0;
+  }
+
+  ::selection {
+    background: var(--color-accent-dim);
+    color: var(--color-accent);
+  }
+}
+
+@layer utilities {
+  /* Blinking dot for status badge */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+  .blink-dot {
+    animation: blink 1.4s infinite;
+  }
+}
