@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { scanIn } from "../animations";
 import { certification } from "../data/portfolio";
+import ScrambleText from "./ScrambleText";
 
 export default function Certifications() {
   return (
@@ -11,9 +12,7 @@ export default function Certifications() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <p className="text-accent uppercase tracking-[0.15em] text-xs font-mono mb-4">
-          // 04 · PROOF
-        </p>
+        <ScrambleText text="// 04 · PROOF" className="text-accent uppercase tracking-[0.15em] text-xs font-mono mb-4 block" />
 
         <div className="bg-surface border border-accent p-8 rounded-sm flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
           <div>

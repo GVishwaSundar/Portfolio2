@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { scanIn } from "../animations";
+import Magnetic from "./Magnetic";
+import TerminalTyping from "./TerminalTyping";
 
 export default function Hero() {
   return (
@@ -26,12 +28,16 @@ export default function Hero() {
           </p>
 
           <div className="flex items-center gap-8 mt-2 font-mono text-sm uppercase tracking-widest">
-            <a href="#projects" className="text-text hover:text-accent hover:underline underline-offset-4 decoration-border-hover hover:decoration-accent transition-colors">
-              View Work ↓
-            </a>
-            <a href="#contact" className="text-text hover:text-accent hover:underline underline-offset-4 decoration-border-hover hover:decoration-accent transition-colors">
-              Get in Touch
-            </a>
+            <Magnetic>
+              <a href="#projects" className="text-text hover:text-accent hover:underline underline-offset-4 decoration-border-hover hover:decoration-accent transition-colors block py-2">
+                View Work ↓
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a href="#contact" className="text-text hover:text-accent hover:underline underline-offset-4 decoration-border-hover hover:decoration-accent transition-colors block py-2">
+                Get in Touch
+              </a>
+            </Magnetic>
           </div>
         </motion.div>
 
@@ -40,21 +46,14 @@ export default function Hero() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-surface border border-border p-6 rounded-lg font-mono text-text-muted text-sm leading-loose w-full"
+          className="bg-surface border border-border p-6 rounded-lg font-mono text-text-muted text-sm leading-loose w-full min-h-[220px]"
         >
           <div className="flex gap-2 mb-4">
             <div className="w-3 h-3 rounded-full bg-border" />
             <div className="w-3 h-3 rounded-full bg-border" />
             <div className="w-3 h-3 rounded-full bg-border" />
           </div>
-          <p><span className="text-accent">{">"}</span> GVS.init()</p>
-          <p><span className="text-accent">{">"}</span> Blockchain (Solidity | DApps)</p>
-          <p><span className="text-accent">{">"}</span> Full-stack (React, Node, Mongo)</p>
-          <p><span className="text-accent">{">"}</span> Open to internships</p>
-          <p className="flex items-center gap-1">
-            <span className="text-accent">{">"}</span> Status: Building
-            <span className="inline-block w-2 h-4 bg-accent animate-[blink_1s_infinite]" />
-          </p>
+          <TerminalTyping />
         </motion.div>
       </div>
     </section>

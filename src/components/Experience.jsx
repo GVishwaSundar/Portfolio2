@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "../animations";
 import { experience, education } from "../data/portfolio";
+import ScrambleText from "./ScrambleText";
 
 export default function Experience() {
   return (
@@ -11,9 +12,7 @@ export default function Experience() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <p className="text-accent uppercase tracking-[0.15em] text-xs font-mono mb-4">
-          // 02 · PATH
-        </p>
+        <ScrambleText text="// 02 · PATH" className="text-accent uppercase tracking-[0.15em] text-xs font-mono mb-4 block" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Experience Card */}

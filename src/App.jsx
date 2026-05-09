@@ -8,10 +8,12 @@ import Skills from "./components/Skills";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Noise from "./components/Noise";
 
 export default function App() {
   return (
     <div className="relative">
+      <Noise />
       <Cursor />
       <ChainLine />
       <Navbar />

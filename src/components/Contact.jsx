@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "../animations";
 import { contact } from "../data/portfolio";
+import ScrambleText from "./ScrambleText";
+import Magnetic from "./Magnetic";
 
 export default function Contact() {
   const cards = [
@@ -17,9 +19,7 @@ export default function Contact() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <p className="text-accent uppercase tracking-[0.15em] text-xs font-mono mb-4">
-          // 05 · PING
-        </p>
+        <ScrambleText text="// 05 · PING" className="text-accent uppercase tracking-[0.15em] text-xs font-mono mb-4 block" />
 
         <h2 className="font-display font-extrabold text-4xl md:text-5xl text-text mb-12">
           Let’s connect
@@ -27,20 +27,21 @@ export default function Contact() {
 
         <div className="flex flex-col md:flex-row justify-center gap-6">
           {cards.map((card, idx) => (
-            <a
-              key={idx}
-              href={card.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-surface border border-border hover:border-border-hover p-6 rounded-sm flex flex-col items-center justify-center gap-2 transition-colors min-w-[200px]"
-            >
-              <span className="font-mono text-xs text-text-faint uppercase tracking-widest">
-                {card.label}
-              </span>
-              <span className="font-mono text-sm text-text-muted hover:text-text transition-colors">
-                {card.value}
-              </span>
-            </a>
+            <Magnetic key={idx}>
+              <a
+                href={card.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-surface border border-border hover:border-border-hover p-6 rounded-sm flex flex-col items-center justify-center gap-2 transition-colors min-w-[200px] w-full"
+              >
+                <span className="font-mono text-xs text-text-faint uppercase tracking-widest">
+                  {card.label}
+                </span>
+                <span className="font-mono text-sm text-text-muted hover:text-text transition-colors">
+                  {card.value}
+                </span>
+              </a>
+            </Magnetic>
           ))}
         </div>
       </motion.div>

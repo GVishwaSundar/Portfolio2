@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "../animations";
 import { skills } from "../data/portfolio";
+import ScrambleText from "./ScrambleText";
 
 export default function Skills() {
   const categories = Object.keys(skills);
@@ -13,9 +14,7 @@ export default function Skills() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <p className="text-accent uppercase tracking-[0.15em] text-xs font-mono mb-4">
-          // 03 · STACK
-        </p>
+        <ScrambleText text="// 03 · STACK" className="text-accent uppercase tracking-[0.15em] text-xs font-mono mb-4 block" />
 
         <motion.div
           variants={stagger}
